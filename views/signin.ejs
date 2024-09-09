@@ -4,9 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign In</title>
-    <link rel="stylesheet" href="/css/signin.css">
+    <link rel="stylesheet" href="public/css/signin.css">
 </head>
 <body>
+    <div class="container">
+        <div class="toggle-buttons">
+          <button id="admin-btn" onclick="showAdminForm()">Admin Login</button>
+          <button id="member-btn" onclick="showMemberForm()">Member Sign Up</button>
+        </div>
+    
+        <div id="admin-form" class="form-container">
+          <h2>Admin Login</h2>
+          <form id="adminLogin">
+            <label for="admin-email">Email:</label>
+            <input type="email" id="admin-email" required>
+            <label for="admin-password">Password:</label>
+            <input type="password" id="admin-password" required>
+            <button type="submit">Login</button>
+          </form>
+        </div>
+    
+        <div id="member-form" class="form-container" style="display: none;">
+          <h2>Member Sign Up</h2>
+          <form id="memberSignUp">
+            <label for="member-name">Name:</label>
+            <input type="text" id="member-name" required>
+            <label for="member-email">Email:</label>
+            <input type="email" id="member-email" required>
+            <label for="member-password">Password:</label>
+            <input type="password" id="member-password" required>
+            <button type="submit">Sign Up</button>
+          </form>
+        </div>
+      </div>
+    
+    <script src="public/app/app.js"></script>
     <h1>Sign In</h1>
 </body>
 </html>
